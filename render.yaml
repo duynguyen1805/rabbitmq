@@ -2,6 +2,8 @@ services:
 - type: web
   name: rabbitmq
   env: docker
+  port: 15672
+  healthCheckPath: /
   envVars:
   - key: RABBITMQ_ERLANG_COOKIE
     generateValue: true
